@@ -1,3 +1,7 @@
-public abstract class Sort {
-    public abstract void sort(int[] array);
+//package SortingAlgorithms.src;
+abstract class Sort {
+    Sort() {};
+    abstract void sort(int[] array);
+    abstract void sort_print(int[] array);
 }
+

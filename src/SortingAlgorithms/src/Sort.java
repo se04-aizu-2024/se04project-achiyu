@@ -1,5 +1,3 @@
-abstract class Sort {
-    Sort() {};
-    abstract int[] sort(int[] array);
-    abstract void sort_print(int[] array);
+public abstract class Sort {
+    public abstract void sort(int[] array);
 }

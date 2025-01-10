@@ -1,17 +1,14 @@
-//import SortingAlgorithms.src.SortingAlgorithms.src.InsertSort;
-//import SortingAlgorithms.src.SortingAlgorithms.src.MergeSort;
-
-//package SortingAlgorithms.src;
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] array = {5, 2, 9, 1, 5, 6};
+        int[] array = {29, 10, 37, 14, 45, 30};
 
         System.out.println("Choose a sorting algorithm:");
-        System.out.println("1. Merge Sort");
-        System.out.println("2. Selection Sort");
+        System.out.println("1. Quick Sort");
+        System.out.println("2. Insert Sort");
+        System.out.println("3. Merge Sort");
+        System.out.println("4. Selection Sort");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -20,22 +17,28 @@ public class Main {
 
         switch (choice) {
             case 1:
-                sorter = new MergeSort();
+                sorter = new QuickSort();
                 break;
             case 2:
+                sorter = new InsertSort();
+                break;
+            case 3:
+                sorter = new MergeSort();
+                break;
+            case 4:
                 sorter = new SelectionSort();
                 break;
             default:
-                System.out.println("Invalid choice! Defaulting to Selection Sort.");
-                sorter = new SelectionSort();
+                System.out.println("Invalid choice! Defaulting to Quick Sort.");
+                sorter = new QuickSort();
         }
 
-        System.out.println("Before sorting:");
+        System.out.println("\nOriginal array:");
         printArray(array);
 
         sorter.sort(array);
 
-        System.out.println("After sorting:");
+        System.out.println("\nSorted array:");
         printArray(array);
 
         scanner.close();
@@ -48,3 +51,4 @@ public class Main {
         System.out.println();
     }
 }
+

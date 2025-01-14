@@ -9,6 +9,8 @@ public class Main {
         System.out.println("2. Insert Sort");
         System.out.println("3. Merge Sort");
         System.out.println("4. Selection Sort");
+        System.out.println("5. Bubble Sort");
+        System.out.println("6. Heap Sort");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -27,6 +29,12 @@ public class Main {
                 break;
             case 4:
                 sorter = new SelectionSort();
+                break;
+            case 5:
+                sorter = new BubbleSort();
+                break;
+            case 6:
+                sorter = new BubbleSort();
                 break;
             default:
                 System.out.println("Invalid choice! Defaulting to Quick Sort.");

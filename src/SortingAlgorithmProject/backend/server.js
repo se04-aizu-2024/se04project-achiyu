@@ -72,7 +72,8 @@ app.post("/analyze", (req, res) => {
     } else if (numbers.length > 50) {
         suggestedAlgorithm = "MergeSort";  // 大きなデータにはマージソート
     }
-
+    
+    
     res.json({ sortedRatio, suggestedAlgorithm });
 });
 

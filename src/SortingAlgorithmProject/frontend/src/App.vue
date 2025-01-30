@@ -224,6 +224,10 @@ button:hover {
   color: #1e1733;
 }
 
+a {
+  color: #5a4498;
+}
+
 .title {
  font-size: 50px;
  text-align: center;

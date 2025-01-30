@@ -6,31 +6,26 @@ public class BubbleSort {
         String input = scanner.nextLine().trim();
         scanner.close();
 
-        int[] numbers = Arrays.stream(input.split(" ")).mapToInt(Integer::parseInt).toArray();
+        String[] splitInput = input.split("[,\\s]+");
+        int[] numbers = Arrays.stream(splitInput).mapToInt(Integer::parseInt).toArray();
         List<String> steps = new ArrayList<>();
-        int comparisons = 0, swaps = 0;
-
+    
         BubbleSort sorter = new BubbleSort();
-        sorter.sort(numbers, steps, comparisons, swaps);
+        sorter.sort(numbers, steps);
 
-        Map<String, Object> result = new HashMap<>();
-        result.put("steps", steps);
-        result.put("comparisons", comparisons);
-        result.put("swaps", swaps);
-        result.put("complexity", "O(n²)");
 
-        System.out.println(new org.json.JSONObject(result).toString());
+        System.out.println(steps.toString());
     }
 
-    public void sort(int[] array, List<String> steps, int comparisons, int swaps) {
+    public void sort(int[] array, List<String> steps) {
         int n = array.length;
         steps.add(Arrays.toString(array));
 
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                comparisons++;
+                
                 if (array[j] > array[j + 1]) {
-                    swaps++;
+                    
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;

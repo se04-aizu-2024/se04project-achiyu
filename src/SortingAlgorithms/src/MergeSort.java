@@ -1,5 +1,3 @@
-//package SortingAlgorithms.src;
-
 public class MergeSort extends Sort {
 
     
@@ -8,7 +6,6 @@ public class MergeSort extends Sort {
             return;
         }
         mergeSort(array, 0, array.length - 1);
-        sort_print(array);
     }
 
     private void mergeSort(int[] array, int left, int right) {
@@ -67,13 +64,6 @@ public class MergeSort extends Sort {
             j++;
             k++;
         }
-    }
-    public void sort_print(int[] array) {
-        
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
     }
 }
 

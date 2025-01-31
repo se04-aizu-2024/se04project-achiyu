@@ -69,7 +69,7 @@ app.post("/analyze", (req, res) => {
         suggestedAlgorithm = "InsertSort";  // ほぼソート済みなら挿入ソート
     } else if (numbers.length < 10) {
         suggestedAlgorithm = "SelectionSort";  // 小規模データには選択ソート
-    } else if (numbers.length > 50) {
+    } else if (numbers.length > 30) {
         suggestedAlgorithm = "MergeSort";  // 大きなデータにはマージソート
     }
     

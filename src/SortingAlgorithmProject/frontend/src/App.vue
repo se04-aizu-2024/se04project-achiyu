@@ -161,7 +161,8 @@ export default {
 
     <p v-if="selectedAlgorithm">Time Complexity: {{ selectedCom }}</p>
       <div v-if="selectedAlgorithm">
-      <p>URL for more information: </p><a v-if="selectedAlgorithm" href="{{ selectedURL }}">{{ selectedURL }}</a>
+      <p>URL for more information: </p>
+      <a v-if="selectedAlgorithm" :href=selectedURL>{{ selectedURL }}</a>
     </div>
 
     
